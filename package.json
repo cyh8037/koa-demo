@@ -18,7 +18,10 @@
   "homepage": "https://github.com/cyh8037/koa-demo#readme",
   "dependencies": {
     "koa": "^2.13.0",
-    "koa-router": "^9.4.0"
+    "koa-body": "^4.2.0",
+    "koa-parameter": "^3.0.1",
+    "koa-router": "^9.4.0",
+    "mongoose": "^5.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
