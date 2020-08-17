@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const koaBody = require('koa-body')
 const parameter = require('koa-parameter')
+const error = require('koa-json-error')
 const mongoose = require('mongoose')
 
 const { dbAddr } = require('./config')
@@ -14,6 +15,7 @@ const app = new Koa()
 mongoose.connect(dbAddr, { useNewUrlParser: true, useUnifiedTopology: true }, () => console.log('mongoose db 连接成功'))
 mongoose.connection.on('error', console.error)
 
+app.use(error())
 app.use(koaBody())
 app.use(parameter(app))
 
